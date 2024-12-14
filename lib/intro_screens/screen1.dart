@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({super.key});
@@ -6,12 +7,17 @@ class Screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.blue,
-        child: const Center(
-          child: Text(
-            "Screen 1",
-            style: TextStyle(fontSize: 30),
-          ),
-        ));
+      color: Colors.yellow,
+      child: Center(
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Lottie.asset('assets/animation/Animation - 1734191082818.json',
+              width: 200, height: 200, fit: BoxFit.contain),
+          const Text(
+            "Offline Access",
+            style: TextStyle(fontSize: 20),
+          )
+        ]),
+      ),
+    );
   }
 }
